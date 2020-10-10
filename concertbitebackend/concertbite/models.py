@@ -12,5 +12,5 @@ class User(models.Model):
     password = models.CharField(max_length=100, blank=False)
     firstName = models.CharField(max_length=100)
     lastName = models.CharField(max_length=100)
-    dateOfBirth = models.DateField()
+    dateOfBirth = models.DateField(null=True)
     gender = models.CharField(max_length=1, choices=GENDERS)
