@@ -20,6 +20,8 @@ from concertbite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/login/username=<str:username>&password=<str:password>/', views.login),
-    path('auth/logout', views.logout),
-    path('auth/register/username=<str:username>&password=<str:password>&email=<str:email>', views.registerUser)
+    path('auth/logout/', views.logout),
+    path('auth/register/username=<str:username>&password=<str:password>&email=<str:email>&fullname=<str:fullname>/', views.registerUser),
+    path('auth/update/<str:args>/', views.update),
+    path('user/data/<str:args>/', views.getData),
 ]
